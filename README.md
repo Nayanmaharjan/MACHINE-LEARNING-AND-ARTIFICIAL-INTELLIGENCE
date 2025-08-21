@@ -1,10 +1,8 @@
-# MACHINE-LEARNING-AND-ARTIFICIAL-INTELLIGENCE
-An end-to-end data science project demonstrating predictive modeling techniques to forecast international flight numbers using multiple regression algorithms.
 
 # Flight Number Prediction using Regression Models
 
 ## 1. Project Overview
-This project focuses on building and evaluating machine learning models to predict the total number of flights (`All_Flights`) based on various factors from a comprehensive dataset. The goal is to demonstrate a comprehensive data science workflow, encompassing data cleaning, exploratory data analysis (EDA), feature engineering, and predictive modelling using multiple regression algorithms.
+This project focuses on building and evaluating machine learning models to predict the total number of flights (`All_Flights`) based on various factors from a comprehensive dataset. The goal is to demonstrate a full data science workflow, including data cleaning, exploratory data analysis (EDA), feature engineering, and predictive modeling using multiple regression algorithms.
 
 ## 2. Dataset
 The analysis is performed on a dataset containing detailed flight information. The key columns include:
@@ -19,22 +17,48 @@ The analysis is performed on a dataset containing detailed flight information. T
 ## 3. Methodology
 The following steps were taken to build the predictive models:
 
-* **Data Cleaning and Pre-processing**: Handled categorical and numerical data.
-* **Exploratory Data Analysis (EDA)**: Analysed key features, distributions, and relationships through statistical summaries and visualisations.
-* **Feature Engineering**: Converted categorical variables to a numerical format suitable for machine learning algorithms.
-* **Model Selection and Training**: Four different regression models were trained and evaluated to find the best performer. The models included:
-    * **Linear Regression**
-    * **Decision Tree Regressor**
-    * **Random Forest Regressor**
-    * **XGBoost Regressor**
-* **Model Evaluation**: Model performance was primarily measured using the R-squared ($R^2$) score.
+### Data Cleaning and Pre-processing
+* Handled categorical and numerical data.
+* Converted the `Month` column to a datetime format for time-series analysis.
+
+### Exploratory Data Analysis (EDA)
+Exploratory data analysis was performed to understand the dataset's characteristics and identify key patterns and relationships.
+
+#### Trend of Flights Over Time
+The first step was to analyze the trend of all flights over the years, which showed the impact of external events like the COVID-19 pandemic on flight volume.
+![Trend of All Flights Over Time](images/Result of Trend of all flights over Time.jpg)
+
+#### Distribution of Maximum Seats
+The distribution of the `Max_Seats` feature was visualised to understand the passenger capacity across different flights.
+![Distribution of Max Seats](images/Distribution of Max Seats.jpg)
+
+#### Correlation Heatmap
+A correlation heatmap was used to visualise the relationships between numerical features in the dataset.
+![Correlation Heatmap](images/Result of Correlation Heatmap.jpg)
+
+#### Scatter Plot: Flights vs. Seats
+A scatter plot was used to explore the relationship between the total number of flights and the maximum number of seats, which showed a strong positive correlation.
+![Scatter Plot of All Flights vs. Max Seats](images/Result of Scatter Plot.jpg)
+
+#### Top 10 Airlines by Flight Volume
+The top 10 airlines with the highest number of flights were identified to understand major contributors to flight traffic.
+![Top 10 Airlines by Flight Volume](images/Result of top 10 airlines..jpg)
+
+### Feature Engineering
+* Categorical variables were one-hot encoded.
+* Numerical data was standardised, and feature selection was performed.
+
+### Model Selection and Training
+Four different regression models were trained and evaluated to find the best performer. The models included:
+* **Linear Regression**
+* **Decision Tree Regressor**
+* **Random Forest Regressor**
+* **XGBoost Regressor**
 
 ## 4. Results
-The models were evaluated based on their accuracy in predicting the number of flights. The $R^2$ scores for each model were:
-* **Linear Regression**: 87.44%
-* **Decision Tree Regressor**: 95.70%
-* **Random Forest Regressor**: 99.88%
-* **XGBoost Regressor**: 99.97%
+The models were evaluated based on their accuracy in predicting flight numbers using the R-squared ($R^2$) score. The summary of the results is shown below.
+
+![Model Performance Results](images/Results.jpg)
 
 The **XGBoost** and **Random Forest** models demonstrated superior performance, accurately capturing the complex patterns in the dataset.
 
@@ -45,6 +69,7 @@ To replicate the analysis, you will need the following files:
 
 You can run the notebook by following these steps:
 1.  Clone this repository to your local machine.
-2.  Ensure you have Python installed with the necessary libraries (e.g., `pandas`, `scikit-learn`, `matplotlib`, `seaborn`, `xgboost`).
+2.  Ensure you have Python installed with the necessary libraries listed in the `requirements.txt` file.
 3.  Open the `Assignment 2.ipynb` file in a Jupyter environment.
 4.  Run all cells in the notebook sequentially.
+
