@@ -1,0 +1,9 @@
+# This file lists the Python packages required to run the Flight Prediction notebook.
+# You can install all of them at once using: pip install -r requirements.txt
+
+numpy
+pandas
+scikit-learn
+matplotlib
+seaborn
+xgboost
