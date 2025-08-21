@@ -2,7 +2,7 @@
 # Flight Number Prediction using Regression Models
 
 ## 1. Project Overview
-This project focuses on building and evaluating machine learning models to predict the total number of flights (`All_Flights`) based on various factors from a comprehensive dataset. The goal is to demonstrate a full data science workflow, including data cleaning, exploratory data analysis (EDA), feature engineering, and predictive modeling using multiple regression algorithms.
+This project focuses on building and evaluating machine learning models to predict the total number of flights (`All_Flights`) based on various factors from a comprehensive dataset. The goal is to demonstrate a comprehensive data science workflow, encompassing data cleaning, exploratory data analysis (EDA), feature engineering, and predictive modelling using multiple regression algorithms.
 
 ## 2. Dataset
 The analysis is performed on a dataset containing detailed flight information. The key columns include:
@@ -25,28 +25,33 @@ The following steps were taken to build the predictive models:
 Exploratory data analysis was performed to understand the dataset's characteristics and identify key patterns and relationships.
 
 #### Trend of Flights Over Time
-The first step was to analyze the trend of all flights over the years, which showed the impact of external events like the COVID-19 pandemic on flight volume.
-![Trend of All Flights Over Time](images/Result of Trend of all flights over Time.jpg)
+The first step was to analyse the trend of all flights over the years, which showed the impact of external events like the COVID-19 pandemic on flight volume.
+
+![Trend of All Flights Over Time](images/Result%20of%20Trend%20of%20all%20flights%20over%20Time.jpg)
 
 #### Distribution of Maximum Seats
 The distribution of the `Max_Seats` feature was visualised to understand the passenger capacity across different flights.
-![Distribution of Max Seats](images/Distribution of Max Seats.jpg)
+
+![Distribution of Max Seats](images/DistributionofMaxSeats.jpg)
 
 #### Correlation Heatmap
 A correlation heatmap was used to visualise the relationships between numerical features in the dataset.
-![Correlation Heatmap](images/Result of Correlation Heatmap.jpg)
+
+![Correlation Heatmap](images/Result%20of%20Correlation%20Heatmap.jpg)
 
 #### Scatter Plot: Flights vs. Seats
 A scatter plot was used to explore the relationship between the total number of flights and the maximum number of seats, which showed a strong positive correlation.
-![Scatter Plot of All Flights vs. Max Seats](images/Result of Scatter Plot.jpg)
+
+![Scatter Plot of All Flights vs. Max Seats](images/Result%20of%20Scatter%20Plot.jpg)
 
 #### Top 10 Airlines by Flight Volume
 The top 10 airlines with the highest number of flights were identified to understand major contributors to flight traffic.
-![Top 10 Airlines by Flight Volume](images/Result of top 10 airlines..jpg)
+
+![Top 10 Airlines by Flight Volume](images/Result%20of%20top%2010%20airlines..jpg)
 
 ### Feature Engineering
 * Categorical variables were one-hot encoded.
-* Numerical data was standardised, and feature selection was performed.
+* Numerical data were standardised, and feature selection was performed.
 
 ### Model Selection and Training
 Four different regression models were trained and evaluated to find the best performer. The models included:
